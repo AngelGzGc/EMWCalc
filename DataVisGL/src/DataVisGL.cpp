@@ -92,10 +92,10 @@ void mouseButton(int button, int state, int x, int y) {
 
 		// when the button is released
 		if (state == GLUT_UP) {
-			GLfloat whiteSpecularMaterial[] = {1.0, 1.0, 1.0};
+			/*GLfloat whiteSpecularMaterial[] = {1.0, 1.0, 1.0};
 			GLfloat mShininess[] = {128};
 			glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, whiteSpecularMaterial);
-			glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, mShininess);
+			glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, mShininess);*/
 		}
 		else  {// state = GLUT_DOWN
 			Ox = x;

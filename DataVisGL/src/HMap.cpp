@@ -55,9 +55,9 @@ void HMap::Paint(){
 
 		    for (int x = 1; x < SizeX-1; x++) {
 				float colorBlue[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-				float colorBlue2[] = { 1.0f, 0.0f, 1.0f, 1.0f };
+				float colorBlue2[] = { 1.0f, 1.0f, 1.0f, 1.0f };
 				glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, colorBlue);
-				glMaterialfv(GL_FRONT, GL_SPECULAR, colorBlue2);
+				//glMaterialfv(GL_FRONT, GL_SPECULAR, colorBlue2);
 				glEnable(GL_COLOR_MATERIAL);
 				glBegin(GL_QUAD_STRIP);
 
