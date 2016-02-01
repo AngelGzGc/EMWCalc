@@ -1,0 +1,6 @@
+.metadata
+
+EMWCalc2
+*.o
+*.d
+**/Release
