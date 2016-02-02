@@ -3,4 +3,6 @@
 EMWCalc2
 *.o
 *.d
+
+**/run
 **/Release
