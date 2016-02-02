@@ -8,7 +8,11 @@ In order to represent the results an ad-hoc implementation of a 3D plotter is co
 
 ### Usage:
 
-In order to compile and execute the program the two sub-programs shall be compiled and executed.
+In order to compile and execute the program a makefile is provided, which compiles the two subprograms and copy the executables to the directory 'run'
+
+```
+make
+```
 
 ```
 cd DataVisGL\Debug
@@ -17,7 +21,7 @@ cd ..\..\EMWCalc\Debug\
 make
 ```
 
-And then the DataVisGL shall be executed first (i.e: executing: ./DataVisGL in the Debug folder) and then the EMWCalc by the same process.
+Then the DataVisGL shall be executed first (i.e: executing: ./DataVisGL in the run folder) and then the EMWCalc by the same process.
 
 
 ### Examples:
