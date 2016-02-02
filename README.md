@@ -14,6 +14,7 @@ In order to compile and execute the program a makefile is provided, which compil
 make
 ```
 
+It is also possible to compile each component independtly:
 ```
 cd DataVisGL\Debug
 make
