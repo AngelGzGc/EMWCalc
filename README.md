@@ -30,4 +30,6 @@ Then the DataVisGL shall be executed first (i.e: executing: ./DataVisGL in the r
  * Wave reflected in a parabola after being generated in it's focus.
 ![Example1](https://github.com/AngelGzGc/EMWCalc/blob/master/Doc/Imagen_Parabola1.png)
 
+![Example orthographic](https://github.com/AngelGzGc/EMWCalc/blob/master/Doc/Imagen_Parabola1_ortho.png)
+
 
