@@ -27,18 +27,18 @@ Then the DataVisGL shall be executed first (i.e: executing: ./DataVisGL in the r
 
 ### ToDo List:
 
-*Documentation*: 
+**Documentation**: 
 - Add some theory background
 
-*DataVisGL*
-- *World overlay*: Some king of overlay to show how the world is constructed, whether it is a material, or free space, or the source of the wave...
+**DataVisGL**
+- **World overlay**: Some king of overlay to show how the world is constructed, whether it is a material, or free space, or the source of the wave...
 
--*Color scale*: Implement the definition of the color relation to heigh. 
+- **Color scale**: Implement the definition of the color relation to heigh. 
 
-*EMWCalc*
-- *New world describer*: Now, in order to defines the areas where it is open space or metal, one has to modify the source code. One idea is to implement some kind of parser to get this data from a file where one can just write: .line metal (x1,y1) (x2,y2) ....
-- *Implement the limits conditions*: so the waves dont get reflected when they hit the limit of the simulated space.
-- *Implement real conductor*: The actual implementation simulates a perfect conductor, include metal conductivity.
+**EMWCalc**
+- **New world describer**: Now, in order to defines the areas where it is open space or metal, one has to modify the source code. One idea is to implement some kind of parser to get this data from a file where one can just write: .line metal (x1,y1) (x2,y2) ....
+- **Implement the limits conditions**: so the waves dont get reflected when they hit the limit of the simulated space.
+- **Implement real conductor**: The actual implementation simulates a perfect conductor, include metal conductivity.
 
 ### Examples:
 
