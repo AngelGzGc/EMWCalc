@@ -4,29 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/Camera.cpp \
-../src/CameraMgr.cpp \
-../src/DataVisGL.cpp \
-../src/HMap.cpp \
-../src/VisualConfig.cpp 
+/home/angel/SwPropio/EMW/libs/all/sources/jsoncpp.cpp 
 
 OBJS += \
-./src/Camera.o \
-./src/CameraMgr.o \
-./src/DataVisGL.o \
-./src/HMap.o \
-./src/VisualConfig.o 
+./sources/jsoncpp.o 
 
 CPP_DEPS += \
-./src/Camera.d \
-./src/CameraMgr.d \
-./src/DataVisGL.d \
-./src/HMap.d \
-./src/VisualConfig.d 
+./sources/jsoncpp.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-src/%.o: ../src/%.cpp
+sources/jsoncpp.o: /home/angel/SwPropio/EMW/libs/all/sources/jsoncpp.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -I/home/angel/SwPropio/EMW/libs/all/includes -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

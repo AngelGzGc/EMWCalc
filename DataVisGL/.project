@@ -24,4 +24,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>sources</name>
+			<type>2</type>
+			<location>/home/angel/SwPropio/EMW/libs/all/sources</location>
+		</link>
+	</linkedResources>
 </projectDescription>
