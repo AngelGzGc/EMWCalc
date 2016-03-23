@@ -8,6 +8,10 @@
 #include <cstring>
 #include <unistd.h>
 
+
+#include "Map.h"
+
+
 #define SIZE 400
 #define TIME 100
 #define SHMSZ     SIZE*SIZE
@@ -60,7 +64,17 @@ void Update2D(double *ez, double *hx, double *hy){
 			}
 		}
 }
+
+
+
+Map* Jread;
+
+
 int main(){
+
+	Jread = new Map();
+	Jread->ReadJSON("world.json");
+
 	int shmid;
 	key_t key;
 	double *shm;
