@@ -76,8 +76,10 @@ void processNormalKeys(unsigned char key, int x, int y) {
 	case 97: //key 'a'
 		if( pers == PERS){
 			CamMgr->setProjectionOrtho();
+			pers=ORTHO;
 		}else{
 			CamMgr->setProjectionPers();
+			pers=PERS;
 		}
 	}
 }

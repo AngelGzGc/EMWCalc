@@ -40,7 +40,7 @@ void CameraMgr::setProjectionOrtho(){
 	Cam->setProjection(ORTHOGRAPHIC);
 	Cam->UpdateProjection();
 
-	Cam->setUps(0.0f, 0.0f, 1.0f);
+	Cam->setUps(0.0f, 0.0f, -1.0f);
 	Cam->setPos(200.0f, 600.0f, 200.0f);
 }
 
@@ -49,6 +49,7 @@ void CameraMgr::setProjectionPers(){
 	Cam->setDistance(1000.0f);
 	Cam->setRefs(200.0f, 0.0f, 200.0f);
 	Cam->setUps(0.0f, 1.0f, 0.0f);
+	//Cam->setUps(1.0f, 0.0f, 0.0f);
 	Cam->setProjection(PERSPECTIVE);
 	Cam->UpdateProjection();
 }
