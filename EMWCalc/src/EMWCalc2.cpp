@@ -141,7 +141,9 @@ int main(){
 		Update2D(ez_,hx_, hy_);
 		//Ez(SIZE/2, SIZE/2) += 10*sin(Time);
 		//Ez(SIZE/2, SIZE/2) += 10*exp(-(Time - 30.0) *(Time - 30.0) / 50.0);
-		Ez(Cx, Cy) += 10*exp(-(Time - 30.0) *(Time - 30.0) / 50.0);
+		//Ez(Cx, Cy) += 10*exp(-(Time - 30.0) *(Time - 30.0) / 50.0);
+		Jread->UpdateSources(ez, Time);
+
 		//Ez(100, 200) += 10*sin(Cdtds/10*Time);
 		//printf("Time: %i\n", Time);
 

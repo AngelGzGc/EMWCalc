@@ -74,8 +74,8 @@ void HMap::Paint(){
 
 
 		        	glColor3f(abs(GetI(x,z)/cs),abs(GetI(x,z)/cs),abs(GetI(x,z)/cs*2));
-		        	glVertex3f(   x, abs(ss*GetI(x,z))    , z );
-		        	glVertex3f( x+1, abs(ss*GetI(x+1,z))  , z );
+		        	glVertex3f(   x, (abs(ss*GetI(x,z)))    , z );
+		        	glVertex3f( x+1, (abs(ss*GetI(x+1,z)))  , z );
 		        	glNormal3f(v1[0],v1[2],v1[3]);
 
 		      }
