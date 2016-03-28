@@ -102,14 +102,15 @@ int main(){
 
 	for(Time = 0; Time < fin_time; Time++){
 
-		for(int i = 0; i < 100; i++){
+		/*for(int i = 0; i < 100; i++){
 			Ez(Cx-p+i,int(round(Cy+2*sqrt(p*i))))=valor_metal;
 			Ez(Cx-p+i,int(round(Cy-2*sqrt(p*i))))=valor_metal;
 			for(int j = 2*sqrt(p*(i)); j <= 2*(sqrt(p*(i+1))); j++){
 				Ez( Cx-p+int(round((j*j)/(4*p))),  Cy+j) = valor_metal;
 				Ez( Cx-p+int(round((j*j)/(4*p))),  Cy-j) = valor_metal;
 			}
-
+*/
+		Jread->ModifyMap(ez);
 			/*Ez(Cx-p+i+1,int(round(Cy-2*sqrt(p*i))))=valor_metal;
 			Ez(Cx-p+i+1,int(round(Cy+2*sqrt(p*i))))=valor_metal;
 			for(int j = 0; j <= ceil(2*(sqrt(p*(i+1))-sqrt(p*(i)))); j++){
@@ -118,7 +119,7 @@ int main(){
 			}
 			Ez(Cx-p+i-1,int(round(Cy-2*sqrt(p*i))))=valor_metal;
 			Ez(Cx-p+i-1,int(round(Cy+2*sqrt(p*i))))=valor_metal;*/
-		}
+		//}
 
 		/*if(Time==0){
 			for( int i = 0; i < SIZE*SIZE ; i++){
