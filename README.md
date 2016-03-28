@@ -36,7 +36,8 @@ Then the DataVisGL shall be executed first (i.e: executing: ./DataVisGL in the r
 - **Color scale**: Implement the definition of the color relation to heigh. 
 
 **EMWCalc**
-- **New world describer**: Now, in order to defines the areas where it is open space or metal, one has to modify the source code. One idea is to implement some kind of parser to get this data from a file where one can just write: .line metal (x1,y1) (x2,y2) ....
+- ~~**New world describer**: Now, in order to defines the areas where it is open space or metal, one has to modify the source code. One idea is to implement some kind of parser to get this data from a file where one can just write: .line metal (x1,y1) (x2,y2) ....~~ (Added JSON parser to describe the world.)
+- **Add more figures to the world parser**
 - **Implement the limits conditions**: so the waves dont get reflected when they hit the limit of the simulated space.
 - **Implement real conductor**: The actual implementation simulates a perfect conductor, include metal conductivity.
 
