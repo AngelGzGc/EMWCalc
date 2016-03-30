@@ -53,17 +53,19 @@ void HMap::Paint(){
 			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 			glShadeModel(GL_SMOOTH);
 
+			float colorBlue[] = { 1.0f, 1.0f, 1.0f, 1.0f };
+			float colorBlue2[] = { 1.0f, 1.0f, 1.0f, 1.0f };
+			glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, colorBlue);
+			//glMaterialfv(GL_FRONT, GL_SPECULAR, colorBlue2);
+			glEnable(GL_COLOR_MATERIAL);
+
 		    for (int x = 1; x < SizeX-1; x++) {
-				float colorBlue[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-				float colorBlue2[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-				glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, colorBlue);
-				//glMaterialfv(GL_FRONT, GL_SPECULAR, colorBlue2);
-				glEnable(GL_COLOR_MATERIAL);
+
 				glBegin(GL_QUAD_STRIP);
 
 
 		      	for (int z = 1; z < SizeY; z++) {
-		    	  	v2[0] = -GetI(x,z)+GetI(x+1, z);
+		    	  	v2[0] = -(abs(GetI(x,z)))+(abs(GetI(x+1, z)));
 		    	    v1[0] = v2[0];
 		    	    v1[1] = -1.0f;
 		    	    v1[2] = v2[0];
@@ -88,6 +90,9 @@ void HMap::Paint(){
 
 
 		//Border line
+		glDisable(GL_LIGHTING);
+
+
 		glLineWidth(2.5);
 		glColor3f(1.0, 1.0, 1.0);
 		glEnable(GL_LINE_SMOOTH);
@@ -104,6 +109,7 @@ void HMap::Paint(){
 		glVertex3f(0, 		Height, 	SizeY);
 		glVertex3f(0.0, 	Height, 	0.0);
 		glEnd();
+		glEnable(GL_LIGHTING);
 
 
 

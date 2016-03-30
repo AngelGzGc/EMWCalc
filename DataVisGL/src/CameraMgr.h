@@ -26,6 +26,8 @@ public:
 	void ChangeViewsize(int Width_, int Height_);
 
 	void setProjection(enum CamType proj);
+	void resetProjectionOrtho();
+	void resetProjectionPers();
 	void setProjectionOrtho();
 	void setProjectionPers();
 };

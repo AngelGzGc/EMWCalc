@@ -1,0 +1,54 @@
+{
+  "config": {
+    "Size" : [400,400]
+  },
+
+  "Sources" : { 
+    "Source1" : {
+      "Type" : "Sin",
+      "Position" : [50, 200],
+      "Offset" : 30.0,
+	"Freq" : 0.1
+      }
+  },
+
+"World":{
+	"Obj1":{
+		"Type" : "Parabola",
+		"Focus": [50,200],
+		"Vertex":[30,200]
+		},
+	"bla": {
+		"Type" : "Line",
+		"From" : [ 200 , 0 ],
+		"To" : [200,180]
+},
+"": {
+		"Type" : "Line",
+		"From" : [ 200 , 220 ],
+		"To" : [200, 400]
+}
+},
+  "World1": {
+    "Obj1": {
+      "Type"  : "Line",
+      "From" : [ 50 , 175 ],
+      "To": [  50, 225 ]
+    },
+    "Obj2": {
+      "Type"  : "Line",
+      "From" : [ 50 , 225 ],
+      "To": [  200, 225 ]
+    },
+    "Obj3": {
+      "Type"  : "Line",
+      "From" : [ 50 , 175 ],
+      "To": [  200, 175 ]
+    },
+	"Obj4": {
+		"Type" : "Line",
+		"From" : [200, 175],
+		"To" : [200 , 225]
+}
+  }
+}

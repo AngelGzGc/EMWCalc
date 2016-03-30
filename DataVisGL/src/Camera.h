@@ -12,7 +12,7 @@
 
 
 
-enum CamType {PERSPECTIVE, ORTHOGRAPHIC};
+enum CamType {PERSPECTIVE, ORTHOGRAPHIC, ORTHO_PROTECTED};
 enum CamAngle { PHY, THETA };
 
 class Camera {

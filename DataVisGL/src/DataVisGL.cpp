@@ -18,6 +18,7 @@
 #include "HMap.h"
 #include "VisualConfig.h"
 #include "CameraMgr.h"
+#include "HUD.h"
 
 using namespace std;
 
@@ -40,6 +41,7 @@ enum perspective pers = PERS;
 
 HMap *Mapa = new HMap(SIZE_X,SIZE_Y);
 CameraMgr *CamMgr= new CameraMgr();
+HUD *Hud;
 
 float ax = 0;
 float Ox = 0, Oy = 0;
@@ -58,9 +60,32 @@ void renderScene(void) {
 	// Reset transformations
 	glLoadIdentity();
 
-	CamMgr->getCamera()->getLookAt();
+	//if(CamMgr->getCamera()->getProjection()== PERSPECTIVE)
+		CamMgr->getCamera()->getLookAt();
 
+	glMatrixMode(GL_MODELVIEW);
 	Mapa->Paint();
+
+	glLoadIdentity();
+
+	glMatrixMode (GL_PROJECTION); // Tell opengl that we are doing project matrix work
+	glLoadIdentity(); // Clear the matrix
+	glOrtho(-200.0, 500.0, 500.0, -100.0, -100.0, 300.0); // Setup an Ortho view
+	glMatrixMode(GL_MODELVIEW); // Tell opengl that we are doing model matrix work. (drawing)
+	glLoadIdentity();
+
+
+	if(CamMgr->getCamera()->getProjection() != PERSPECTIVE)
+	{
+		glDisable(GL_LIGHTING);
+
+		Hud->Paint();
+
+		glEnable(GL_LIGHTING);
+	}
+
+
+	CamMgr->getCamera()->UpdateProjection();
 
 	glutSwapBuffers();
 
@@ -75,10 +100,10 @@ void processNormalKeys(unsigned char key, int x, int y) {
 	switch(key){
 	case 97: //key 'a'
 		if( pers == PERS){
-			CamMgr->setProjectionOrtho();
+			CamMgr->resetProjectionOrtho();
 			pers=ORTHO;
 		}else{
-			CamMgr->setProjectionPers();
+			CamMgr->resetProjectionPers();
 			pers=PERS;
 		}
 	}
@@ -86,7 +111,7 @@ void processNormalKeys(unsigned char key, int x, int y) {
 
 
 void mouseButton(int button, int state, int x, int y) {
-	if(CamMgr->getCamera()->getProjection() == ORTHOGRAPHIC){
+	if(CamMgr->getCamera()->getProjection() != PERSPECTIVE){
 		return;
 	}
 	// only start motion if the left button is pressed
@@ -133,6 +158,7 @@ int main(int argc, char **argv) {
 		VConf->LightInit();
 	key = 5678;
 
+	Hud =new HUD();
 	/*
 	 * Create the segment.
 	 */

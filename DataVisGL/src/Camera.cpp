@@ -103,6 +103,7 @@ void Camera::ChangeViewsize(int Width_, int Height_){
 
 void Camera::setProjection(enum CamType Proj){
 	Projection = Proj;
+
 }
 
 void Camera::UpdateProjection(){
@@ -126,7 +127,8 @@ void Camera::UpdateProjection(){
 	if(Projection == PERSPECTIVE){
 		gluPerspective(45.0f, ratio, 0.1f, 15000.0f);
 	}else{
-		glOrtho(-300.0f, 300.0f, -300.0f, 300.0f,-4000.0f, 4000.0f);
+		glOrtho(-400.0f, 300.0f, -300.0f, 300.0f,-4000.0f, 4000.0f);
+		//glOrtho(0.0f, 1.0f*Width, 1.0f*Height, 0.0f,-4000.0f, 4000.0f);
 	}
 
 	// Get Back to the Modelview
