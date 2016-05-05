@@ -75,3 +75,22 @@ void OLine::Paint(double *Ez, int SizeX){
 		}
 	}
 }
+
+OCircle::OCircle(int x_, int y_, double radius_):
+	x(x_),
+	y(y_),
+	radius(radius_)
+{}
+
+OCircle::~OCircle(){}
+
+void OCircle::Paint(double *Ez, int SizeX){
+	double valor_metal = 0;
+	   for (int i=0; i < 360; i++)
+	   {
+		  float degInRad = i*DEG2RAD;
+		  PAINT_MOD(x+int(round(cos(degInRad)*radius)), y+int(round(sin(degInRad)*radius))) = valor_metal;
+	      //glVertex2f(cos(degInRad)*radius,sin(degInRad)*radius);
+	   }
+
+}

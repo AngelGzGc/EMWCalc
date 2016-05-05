@@ -8,11 +8,12 @@ In order to represent the results an ad-hoc implementation of a 3D plotter is co
 
 ### Usage:
 
-In order to compile and execute the program a makefile is provided, which compiles the two subprograms and copy the executables to the directory 'run'
+In order to compile and execute the program a makefile is provided,
+which compiles the two subprograms and copy the executables to the
+directory 'run'
 
-```
-make
-```
+``` make make run ``` If running with _make run_ in order to close the
+program one should close the window and CTRL+C in console.
 
 It is also possible to compile each component independtly:
 ```
@@ -31,7 +32,7 @@ Then the DataVisGL shall be executed first (i.e: executing: ./DataVisGL in the r
 - Add some theory background
 
 **DataVisGL**
-- **World overlay**: Some king of overlay to show how the world is constructed, whether it is a material, or free space, or the source of the wave...
+- **World overlay**: ~~Some king of overlay to show how the world is constructed,~~ whether it is a material, or free space, or the source of the wave...
 
 - **Color scale**: Implement the definition of the color relation to heigh. 
 
@@ -44,8 +45,8 @@ Then the DataVisGL shall be executed first (i.e: executing: ./DataVisGL in the r
 ### Examples:
 
  * Wave reflected in a parabola after being generated in it's focus.
-![Example1](https://github.com/AngelGzGc/EMWCalc/blob/master/Doc/Imagen_Parabola1.png)
+![Example1](https://github.com/AngelGzGc/EMWCalc/blob/master/Doc/Imagen_Parabola_rendija_3D.png)
 
-![Example orthographic](https://github.com/AngelGzGc/EMWCalc/blob/master/Doc/Imagen_Parabola1_ortho.png)
+![Example orthographic](https://github.com/AngelGzGc/EMWCalc/blob/master/Doc/Imagen_Parabola_rendija_2D.png)
 
 

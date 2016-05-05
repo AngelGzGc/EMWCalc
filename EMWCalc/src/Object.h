@@ -1,6 +1,7 @@
 #ifndef OBJECT_H_
 #define OBJECT_H_
 
+#define DEG2RAD 0.017453292
 
 enum WorldType{
 	Line = 0,
@@ -43,6 +44,18 @@ public:
 	virtual ~OLine();
 	void Paint(double *Ez, int SizeX);
 
+};
+
+class OCircle: public Object{
+private:
+	int x,y;
+	double radius;
+
+public:
+	OCircle(int x, int y, double radius);
+	virtual ~OCircle();
+
+	void Paint(double *Ez, int SizeX);
 };
 
 #endif

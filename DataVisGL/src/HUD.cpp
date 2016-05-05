@@ -35,13 +35,13 @@ void HUD::Paint(){
 	// Draw the color bar
 	glTranslatef(-150.0,  0.0, 0.0);
 	glBegin(GL_TRIANGLE_STRIP);
-	glColor3f(0.0, 0.0, 0.0);
+	glColor3f(1.0, 1.0, 1.0);
 	glVertex3f(0.0, 	0.0, 	0.0);
 	glVertex3f(50.0, 	0.0, 		0);
 	glColor3f(0.5,0.5,1.0);
 	glVertex3f(0.0,		200.0,	0.0);
 	glVertex3f(50.0, 	200.0, 	0.0);
-	glColor3f(1.0,1.0,1.0);
+	glColor3f(0.0,0.0,0.0);
 	glVertex3f(0.0,		400.0,	0.0);
 	glVertex3f(50.0,	400.0,	0.0);
 	glEnd();

@@ -61,6 +61,16 @@ void Map::ReadJSON(std::string file){
 					it["From"][1].asInt(),
 					it["To"][0].asInt(),
 					it["To"][1].asInt()));
+		}else if( it["Type"] == "Circle"){
+			printf("[MAP] Debug: + Circle: (%i, %i), %.3f\n",
+					it["Center"][0].asInt(),
+					it["Center"][1].asInt(),
+					it["Radius"].asFloat());
+
+			OList.push_back(new OCircle(
+					it["Center"][0].asInt(),
+					it["Center"][1].asInt(),
+					it["Radius"].asFloat()));
 		}
 
 	}

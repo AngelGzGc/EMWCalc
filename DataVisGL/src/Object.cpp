@@ -71,9 +71,30 @@ OLine::OLine(int x1_, int y1_, int x2_, int y2_):
 OLine::~OLine(){}
 
 void OLine::Paint(){
-	printf("Line: (%i, %i), (%i, %i)\n", x1,y1,x2,y2);
 	glBegin(GL_LINE_STRIP);
 	glVertex3f((float)x1, 	(float)y1, 	0.0);
 	glVertex3f((float)x2, 	(float)y2, 	0.0);
 	glEnd();
 }
+
+OCircle::OCircle(int x_, int y_, double radius_):
+	x(x_),
+	y(y_),
+	radius(radius_)
+{}
+
+OCircle::~OCircle(){}
+
+void OCircle::Paint(void){
+	   glBegin(GL_LINE_LOOP);
+	   glPushMatrix();
+	   glTranslatef(x,y,0);
+	   for (int i=0; i < 360; i++)
+	   {
+	      float degInRad = i*DEG2RAD;
+	      glVertex2f(x+cos(degInRad)*radius,y+sin(degInRad)*radius);
+	   }
+	   glPopMatrix();
+	   glEnd();
+}
+

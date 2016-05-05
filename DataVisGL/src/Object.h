@@ -1,12 +1,21 @@
 #ifndef OBJECT_H_
 #define OBJECT_H_
 
+#define DEG2RAD 0.017453292
 
 enum WorldType{
 	Line = 0,
-	Parabola = 1
+	Parabola = 1,
+	Circle = 2
 };
 
+/**
+ * Object Interface.
+ *
+ * Every single paintable object has to be derived from this class so it
+ * can be painted in the main loop.
+ *
+ */
 class Object{
 public:
 	virtual ~Object();
@@ -43,6 +52,19 @@ public:
 	virtual ~OLine();
 	void Paint();
 
+};
+
+
+class OCircle: public Object{
+private:
+	int x,y;
+	double radius;
+
+public:
+	OCircle(int x, int y, double radius);
+	virtual ~OCircle();
+
+	void Paint();
 };
 
 #endif
